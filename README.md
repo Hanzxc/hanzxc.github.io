@@ -1,4 +1,4 @@
-# Jun Han — Cybersecurity Portfolio
+# Jun Han - Cybersecurity Portfolio
 
 This repository powers my GitHub Pages portfolio: https://hanzxc.github.io
 
@@ -11,12 +11,12 @@ It is built for job searches, recruiter screening, and interview preparation. Th
 
 ## What is included
 
-- `index.html` — main portfolio landing page
-- `resume.html` — printable one-page resume snapshot
-- `styles.css` — responsive dark portfolio styling
-- `404.html` — simple not-found page
-- `robots.txt` and `sitemap.xml` — basic search engine metadata
-- `scripts/check_site.py` — lightweight local validation for links and required sections
+- `index.html` - main portfolio landing page
+- `resume.html` - printable one-page resume snapshot
+- `styles.css` - responsive dark portfolio styling
+- `404.html` - simple not-found page
+- `robots.txt` and `sitemap.xml` - basic search engine metadata
+- `scripts/check_site.py` - lightweight local validation for links and required sections
 
 ## Local preview
 
@@ -39,7 +39,6 @@ python3 scripts/check_site.py
 ## Next portfolio improvements
 
 - Add a real contact email and LinkedIn URL when ready.
-- Build and link the ReconForge CLI project.
-- Build and link the Updatr patch tracker project.
 - Add legal HTB/THM-style writeups focused on methodology and lessons learned.
+- Add screenshots or short demo notes for the Lamport OTP and IDS projects.
 - Export a polished PDF resume from `resume.html`.

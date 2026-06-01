@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jun Han — cybersecurity student, former data-centre engineer, and OSCP-track learner building practical security tooling.">
+  <meta name="description" content="Jun Han, cybersecurity student, former data-centre engineer, and OSCP-track learner building practical security tooling.">
   <meta name="theme-color" content="#08111f">
   <meta property="og:title" content="Jun Han | Cybersecurity Portfolio">
   <meta property="og:description" content="Infrastructure experience, security fundamentals, automation, and practical cyber projects.">
@@ -43,7 +43,7 @@
         <h1>I build practical security skills on top of real infrastructure experience.</h1>
         <p class="lead">
           I am Jun Han, a UOW/SIM cybersecurity student with hands-on data-centre operations experience from Equinix and Alibaba Cloud.
-          My portfolio focuses on security fundamentals, Linux, automation, and clear documentation — the useful stuff that survives contact with real systems.
+          My portfolio focuses on security fundamentals, Linux, automation, and clear documentation. The useful stuff that survives contact with real systems.
         </p>
         <div class="cta-row" aria-label="Primary actions">
           <a class="button primary" href="#projects">See my work</a>
@@ -90,56 +90,60 @@ Build job-ready security projects</code></pre>
       <div class="section-heading">
         <p class="eyebrow">Selected projects</p>
         <h2>Portfolio pieces built for recruiter and technical interviews.</h2>
-        <p>Each item is intentionally framed around problem, approach, and value. No fake “expert” energy — just clear proof of learning and execution.</p>
+        <p>These are small, honest projects that show how I think, test, and document technical work.</p>
       </div>
 
       <div class="project-grid">
         <article class="project-card featured">
+          <div class="card-kicker">Live · Security fundamentals</div>
+          <h3>Lamport OTP</h3>
+          <p>
+            A standard-library Python implementation of the Lamport hash-chain one-time password scheme.
+          </p>
+          <ul>
+            <li>Builds a seed-based hash chain with SHA-256.</li>
+            <li>Discloses passwords in reverse order and verifies against a moving server anchor.</li>
+            <li>Includes tests for replay rejection, forged passwords, out-of-order use, and chain exhaustion.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>Cryptography basics</span><span>Unit tests</span><span>Authentication</span></div>
+          <a class="text-link" href="https://github.com/Hanzxc/lamport-otp">View repository →</a>
+        </article>
+
+        <article class="project-card featured">
+          <div class="card-kicker">Live · Detection engineering</div>
+          <h3>Intrusion Detection System Simulation</h3>
+          <p>
+            An anomaly-based IDS simulation that builds a baseline from activity data, then flags unusual days using weighted deviations and a calculated threshold.
+          </p>
+          <ul>
+            <li>Separates activity generation, analysis, and alerting logic.</li>
+            <li>Uses text input files for events, normal activity, and attack activity.</li>
+            <li>Includes a university project note with my ownership of the activity engine and logs module.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>IDS</span><span>Anomaly detection</span><span>Security logs</span></div>
+          <a class="text-link" href="https://github.com/Hanzxc/intrusion-detection-system">View repository →</a>
+        </article>
+
+        <article class="project-card">
           <div class="card-kicker">Live · GitHub Pages</div>
           <h3>Cybersecurity Portfolio Site</h3>
           <p>
-            A fast static portfolio that presents my cybersecurity direction, infrastructure background, resume snapshot, and project roadmap for future job searches.
+            A fast static portfolio that presents my cybersecurity direction, infrastructure background, resume snapshot, and public project work.
           </p>
           <ul>
             <li>Built with plain HTML/CSS for speed and simplicity.</li>
             <li>Includes a printable resume page and interview-friendly positioning.</li>
             <li>Uses honest project status labels instead of inflated claims.</li>
           </ul>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span><span>Personal branding</span></div>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span><span>Documentation</span></div>
           <a class="text-link" href="https://github.com/Hanzxc/hanzxc.github.io">View repository →</a>
-        </article>
-
-        <article class="project-card">
-          <div class="card-kicker">Build next · Security automation</div>
-          <h3>ReconForge</h3>
-          <p>
-            Planned Python CLI for OSCP-style recon notes: parse scan outputs, organize services, and generate Markdown reports for lab targets.
-          </p>
-          <ul>
-            <li>Focus: nmap output parsing, service checklists, Markdown reporting.</li>
-            <li>Value: reduces repetitive enumeration admin while keeping manual analysis in control.</li>
-          </ul>
-          <div class="tags"><span>Python</span><span>Nmap</span><span>CLI</span><span>Reporting</span></div>
-        </article>
-
-        <article class="project-card">
-          <div class="card-kicker">Build next · Governance/SecOps</div>
-          <h3>Updatr</h3>
-          <p>
-            Planned vulnerability-aware patch tracker for homelabs and small teams: inventory packages, enrich with vulnerability data, and rank what to patch first.
-          </p>
-          <ul>
-            <li>Focus: package inventory, OSV/NVD-style enrichment, risk scoring.</li>
-            <li>Value: shows the bridge between technical scanning and practical remediation.</li>
-          </ul>
-          <div class="tags"><span>Python</span><span>SQLite</span><span>Risk scoring</span><span>Vulnerability management</span></div>
         </article>
 
         <article class="project-card">
           <div class="card-kicker">Study system · OSCP track</div>
           <h3>Security Lab Workflow</h3>
           <p>
-            Structured workflow for enumeration, web testing, privilege escalation notes, and post-exploitation cleanup while practicing on legal labs like HTB and THM.
+            Structured workflow for enumeration, web testing, privilege escalation notes, and cleanup while practicing on legal labs like HTB and THM.
           </p>
           <ul>
             <li>Focus: repeatable checklists, clean notes, and post-box reflections.</li>
@@ -158,7 +162,7 @@ Build job-ready security projects</code></pre>
       <div class="proof-grid">
         <article>
           <h3>Public artifacts</h3>
-          <p>Clean repositories with README files, screenshots, installation steps, and honest status labels.</p>
+          <p>Clean repositories with README files, runnable examples, tests where useful, and honest status labels.</p>
         </article>
         <article>
           <h3>Security writeups</h3>
