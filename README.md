@@ -1,24 +1,45 @@
 # Jun Han — Cybersecurity Portfolio
 
-This repository powers my GitHub Pages portfolio at https://hanzxc.github.io.
+This repository powers my GitHub Pages portfolio: https://hanzxc.github.io
 
-It is designed for job interviews and recruiter screening. The site highlights:
+It is built for job searches, recruiter screening, and interview preparation. The site presents a clear story:
 
-- cybersecurity studies and OSCP-track learning
-- infrastructure and data-centre operations background
-- security tooling, Linux, automation, and documentation skills
-- a short resume snapshot for quick interview prep
+- cybersecurity student at UOW / SIM
+- former data-centre engineer with Equinix and Alibaba Cloud experience
+- OSCP-track learner building practical security fundamentals
+- Python/Bash automation and technical documentation focus
 
-## Files
+## What is included
 
-- `index.html` — main portfolio page
-- `resume.html` — one-page resume snapshot with print button
-- `styles.css` — responsive styling
-- `.nojekyll` — tells GitHub Pages to serve this as a static site
+- `index.html` — main portfolio landing page
+- `resume.html` — printable one-page resume snapshot
+- `styles.css` — responsive dark portfolio styling
+- `404.html` — simple not-found page
+- `robots.txt` and `sitemap.xml` — basic search engine metadata
+- `scripts/check_site.py` — lightweight local validation for links and required sections
 
-## Next improvements
+## Local preview
 
-- Add preferred email address and LinkedIn URL
-- Add screenshots or writeups from real lab projects
-- Build and link the ReconForge Python CLI project
-- Add downloadable PDF resume
+```bash
+python3 -m http.server 8080
+```
+
+Then open:
+
+```text
+http://localhost:8080
+```
+
+## Validate
+
+```bash
+python3 scripts/check_site.py
+```
+
+## Next portfolio improvements
+
+- Add a real contact email and LinkedIn URL when ready.
+- Build and link the ReconForge CLI project.
+- Build and link the Updatr patch tracker project.
+- Add legal HTB/THM-style writeups focused on methodology and lessons learned.
+- Export a polished PDF resume from `resume.html`.

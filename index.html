@@ -3,179 +3,250 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jun Han — cybersecurity student, infrastructure operator, and OSCP-track learner.">
-  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Jun Han — cybersecurity student, former data-centre engineer, and OSCP-track learner building practical security tooling.">
+  <meta name="theme-color" content="#08111f">
+  <meta property="og:title" content="Jun Han | Cybersecurity Portfolio">
+  <meta property="og:description" content="Infrastructure experience, security fundamentals, automation, and practical cyber projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hanzxc.github.io/">
   <title>Jun Han | Cybersecurity Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jun Han",
+    "url": "https://hanzxc.github.io/",
+    "sameAs": ["https://github.com/Hanzxc"],
+    "knowsAbout": ["Cybersecurity", "Linux", "Penetration testing fundamentals", "Python automation", "Infrastructure operations"]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="hero">
+
+  <header class="site-header" id="top">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Jun Han portfolio home">JH</a>
       <div class="nav-links">
-        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#proof">Proof</a>
         <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
+        <a href="#story">Story</a>
         <a href="resume.html">Resume</a>
-        <a href="https://github.com/Hanzxc">GitHub</a>
       </div>
     </nav>
 
-    <section id="top" class="hero-grid">
+    <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Cybersecurity student • Infrastructure operator • OSCP-track learner</p>
-        <h1>Hi, I’m Jun Han. I build secure, practical systems from the rack to the shell.</h1>
+        <p class="eyebrow">Cybersecurity student · ex data-centre engineer · OSCP-track learner</p>
+        <h1>I build practical security skills on top of real infrastructure experience.</h1>
         <p class="lead">
-          I bring data-centre operations experience, Linux tooling, and a security-first mindset into hands-on cybersecurity work.
-          My focus is practical defence, penetration-testing fundamentals, automation, and clear technical documentation.
+          I am Jun Han, a UOW/SIM cybersecurity student with hands-on data-centre operations experience from Equinix and Alibaba Cloud.
+          My portfolio focuses on security fundamentals, Linux, automation, and clear documentation — the useful stuff that survives contact with real systems.
         </p>
-        <div class="cta-row">
-          <a class="button primary" href="#work">View portfolio</a>
+        <div class="cta-row" aria-label="Primary actions">
+          <a class="button primary" href="#projects">See my work</a>
           <a class="button secondary" href="resume.html">Resume snapshot</a>
+          <a class="button ghost" href="https://github.com/Hanzxc">GitHub profile</a>
         </div>
       </div>
-      <aside class="profile-card" aria-label="Profile summary">
-        <div class="avatar" aria-hidden="true">JH</div>
-        <h2>Interview snapshot</h2>
-        <ul>
-          <li>Cybersecurity student at UOW / SIM</li>
-          <li>Former data-centre engineer: Equinix and Alibaba Cloud</li>
-          <li>SAF Artillery Operator background</li>
-          <li>Preparing for OSCP with HTB / THM practice</li>
-        </ul>
+
+      <aside class="terminal-card" aria-label="Quick profile snapshot">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <pre><code>$ whoami
+Jun Han
+
+$ focus
+Cybersecurity · Linux · Automation
+
+$ background
+Data-centre engineering
+SAF Artillery Operator
+
+$ current_goal
+Build job-ready security projects</code></pre>
       </aside>
     </section>
   </header>
 
   <main id="main">
-    <section class="section stats" aria-label="Core strengths">
+    <section class="section metric-grid" aria-label="Portfolio highlights">
       <article>
-        <span class="stat">Ops</span>
-        <p>Comfortable with servers, cabling, hardware, uptime, and disciplined incident handling.</p>
+        <strong>Infrastructure</strong>
+        <p>Real exposure to servers, racks, hardware, uptime, procedures, and operational discipline.</p>
       </article>
       <article>
-        <span class="stat">Security</span>
-        <p>Learning offensive security to think like attackers and build better defensive habits.</p>
+        <strong>Security</strong>
+        <p>Building hands-on fundamentals across enumeration, web testing, Linux privilege escalation, and defensive thinking.</p>
       </article>
       <article>
-        <span class="stat">Code</span>
-        <p>Uses Python, Bash, C++, SQL, and automation to turn repeated work into repeatable tools.</p>
+        <strong>Automation</strong>
+        <p>Using Python and Bash to turn repeatable security workflows into clean tools and reports.</p>
       </article>
     </section>
 
-    <section id="work" class="section">
+    <section class="section" id="projects">
       <div class="section-heading">
-        <p class="eyebrow">Selected work</p>
-        <h2>Portfolio pieces for interviews</h2>
-        <p>These cards are written to make recruiter and technical interviewer conversations easier: problem, action, and value.</p>
+        <p class="eyebrow">Selected projects</p>
+        <h2>Portfolio pieces built for recruiter and technical interviews.</h2>
+        <p>Each item is intentionally framed around problem, approach, and value. No fake “expert” energy — just clear proof of learning and execution.</p>
       </div>
-      <div class="card-grid">
-        <article class="work-card featured">
-          <div class="card-topline">Live GitHub Pages site</div>
-          <h3>Personal cybersecurity portfolio</h3>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="card-kicker">Live · GitHub Pages</div>
+          <h3>Cybersecurity Portfolio Site</h3>
           <p>
-            Replaced the default GitHub Pages template with a professional static portfolio focused on cybersecurity, infrastructure,
-            OSCP preparation, and interview-ready positioning.
+            A fast static portfolio that presents my cybersecurity direction, infrastructure background, resume snapshot, and project roadmap for future job searches.
           </p>
-          <div class="tags">
-            <span>HTML</span><span>CSS</span><span>GitHub Pages</span><span>Personal branding</span>
-          </div>
-          <a href="https://github.com/Hanzxc/hanzxc.github.io">Repository</a>
+          <ul>
+            <li>Built with plain HTML/CSS for speed and simplicity.</li>
+            <li>Includes a printable resume page and interview-friendly positioning.</li>
+            <li>Uses honest project status labels instead of inflated claims.</li>
+          </ul>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span><span>Personal branding</span></div>
+          <a class="text-link" href="https://github.com/Hanzxc/hanzxc.github.io">View repository →</a>
         </article>
 
-        <article class="work-card">
-          <div class="card-topline">Next build</div>
-          <h3>ReconForge: OSCP-style recon report generator</h3>
+        <article class="project-card">
+          <div class="card-kicker">Build next · Security automation</div>
+          <h3>ReconForge</h3>
           <p>
-            A planned Python CLI that will parse safe enumeration output, organize notes, and generate Markdown reports for lab targets.
-            This is designed to show security automation without pretending the tool replaces manual analysis.
+            Planned Python CLI for OSCP-style recon notes: parse scan outputs, organize services, and generate Markdown reports for lab targets.
           </p>
-          <div class="tags">
-            <span>Python</span><span>Nmap parsing</span><span>Markdown reports</span><span>Security automation</span>
-          </div>
+          <ul>
+            <li>Focus: nmap output parsing, service checklists, Markdown reporting.</li>
+            <li>Value: reduces repetitive enumeration admin while keeping manual analysis in control.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>Nmap</span><span>CLI</span><span>Reporting</span></div>
         </article>
 
-        <article class="work-card">
-          <div class="card-topline">Private study lab</div>
-          <h3>OSCP learning workflow</h3>
+        <article class="project-card">
+          <div class="card-kicker">Build next · Governance/SecOps</div>
+          <h3>Updatr</h3>
           <p>
-            A hands-on lab workflow for enumeration, web testing, privilege escalation notes, and post-exploitation checklists using
-            HTB, THM, Linux tooling, and structured Obsidian notes.
+            Planned vulnerability-aware patch tracker for homelabs and small teams: inventory packages, enrich with vulnerability data, and rank what to patch first.
           </p>
-          <div class="tags">
-            <span>Linux</span><span>Burp</span><span>Nmap</span><span>Privilege escalation</span>
-          </div>
+          <ul>
+            <li>Focus: package inventory, OSV/NVD-style enrichment, risk scoring.</li>
+            <li>Value: shows the bridge between technical scanning and practical remediation.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>SQLite</span><span>Risk scoring</span><span>Vulnerability management</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-kicker">Study system · OSCP track</div>
+          <h3>Security Lab Workflow</h3>
+          <p>
+            Structured workflow for enumeration, web testing, privilege escalation notes, and post-exploitation cleanup while practicing on legal labs like HTB and THM.
+          </p>
+          <ul>
+            <li>Focus: repeatable checklists, clean notes, and post-box reflections.</li>
+            <li>Value: turns practice into evidence of methodical learning.</li>
+          </ul>
+          <div class="tags"><span>Linux</span><span>Burp Suite</span><span>Nmap</span><span>Obsidian</span></div>
         </article>
       </div>
     </section>
 
-    <section id="skills" class="section split">
+    <section class="section proof" id="proof">
+      <div>
+        <p class="eyebrow">Proof of direction</p>
+        <h2>What I am making visible before job applications.</h2>
+      </div>
+      <div class="proof-grid">
+        <article>
+          <h3>Public artifacts</h3>
+          <p>Clean repositories with README files, screenshots, installation steps, and honest status labels.</p>
+        </article>
+        <article>
+          <h3>Security writeups</h3>
+          <p>Lab writeups focused on methodology and lessons learned, avoiding sensitive walkthrough dumps when inappropriate.</p>
+        </article>
+        <article>
+          <h3>Automation scripts</h3>
+          <p>Small Python/Bash tools that solve real workflow pain: parsing, reporting, and checklist generation.</p>
+        </article>
+        <article>
+          <h3>Resume alignment</h3>
+          <p>Every project should support the same story: infrastructure foundation, security growth, and practical execution.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split" id="skills">
       <div>
         <p class="eyebrow">Technical range</p>
-        <h2>What I can contribute</h2>
+        <h2>Where I can contribute.</h2>
         <p>
-          I am strongest where infrastructure, security operations, and automation overlap. I like work that rewards careful thinking,
-          clean notes, and repeatable processes.
+          I am strongest at the overlap of infrastructure operations, security fundamentals, and automation. I like clear procedures, careful notes, and tools that remove repeated work.
         </p>
       </div>
-      <div class="skill-list">
-        <div>
-          <h3>Security</h3>
-          <p>Web testing basics, SQL injection, Burp Suite, Nmap, Linux privilege escalation fundamentals, threat-aware thinking.</p>
-        </div>
-        <div>
-          <h3>Infrastructure</h3>
-          <p>Data-centre operations, physical servers, Linux, networking fundamentals, uptime discipline, operational troubleshooting.</p>
-        </div>
-        <div>
-          <h3>Automation</h3>
-          <p>Python, Bash, scripting, parsing command output, report generation, workflow automation, technical documentation.</p>
-        </div>
+      <div class="skill-stack">
+        <article>
+          <h3>Security fundamentals</h3>
+          <p>Nmap, Burp Suite, web testing basics, SQL injection concepts, Linux privilege escalation fundamentals, threat-aware thinking.</p>
+        </article>
+        <article>
+          <h3>Infrastructure and systems</h3>
+          <p>Data-centre operations, Linux, networking fundamentals, hardware awareness, uptime discipline, troubleshooting under constraints.</p>
+        </article>
+        <article>
+          <h3>Programming and automation</h3>
+          <p>Python, Bash, C++, SQL, Git, parsing command output, static-site publishing, Markdown/HTML reporting.</p>
+        </article>
       </div>
     </section>
 
-    <section id="experience" class="section timeline-section">
+    <section class="section story" id="story">
       <div class="section-heading">
         <p class="eyebrow">Background</p>
-        <h2>Experience path</h2>
+        <h2>From racks and cables to shells and security.</h2>
       </div>
       <div class="timeline">
         <article>
           <span>Now</span>
-          <h3>Cybersecurity student and OSCP-track learner</h3>
-          <p>Studying system security and cybersecurity while building practical penetration-testing and defensive security habits.</p>
+          <h3>Cybersecurity student</h3>
+          <p>Studying cybersecurity and system security while building public projects that show practical learning.</p>
+        </article>
+        <article>
+          <span>Current track</span>
+          <h3>OSCP-oriented practice</h3>
+          <p>Practicing legal lab workflows across enumeration, web testing, privilege escalation, documentation, and reflection.</p>
         </article>
         <article>
           <span>Before</span>
           <h3>Data-centre engineering</h3>
-          <p>Worked in real infrastructure environments, including Equinix and Alibaba Cloud, with physical systems and operational constraints.</p>
+          <p>Worked in infrastructure environments including Equinix and Alibaba Cloud, where reliability and procedure matter.</p>
         </article>
         <article>
           <span>Earlier</span>
           <h3>SAF Artillery Operator</h3>
-          <p>Built discipline, pressure handling, teamwork, and a bias toward clear procedures.</p>
+          <p>Built discipline, pressure handling, teamwork, and respect for clear operating procedures.</p>
         </article>
       </div>
     </section>
 
-    <section class="section interview">
-      <p class="eyebrow">For recruiters and interviewers</p>
-      <h2>30-second pitch</h2>
+    <section class="section pitch">
+      <p class="eyebrow">30-second pitch</p>
+      <h2>I am aiming for junior cybersecurity, SOC, infrastructure security, or security engineering internship roles.</h2>
       <p>
-        I am a cybersecurity student with real infrastructure experience. I understand that security is not just tools and alerts;
-        it is reliability, process, and clear communication. I am currently sharpening my offensive-security fundamentals so I can
-        better understand attacker behaviour and contribute to practical defence.
+        I bring real infrastructure experience, a security-first learning path, and the ability to automate and document technical workflows clearly. I am early in my offensive-security journey, but I am building in public and improving through deliberate practice.
       </p>
-      <a class="button primary" href="https://github.com/Hanzxc">View my GitHub</a>
+      <div class="cta-row">
+        <a class="button primary" href="resume.html">Open resume snapshot</a>
+        <a class="button secondary" href="https://github.com/Hanzxc">View GitHub</a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     <p>Built by Jun Han. Practical security, clean notes, fewer loose cables.</p>
     <div>
-      <a href="https://github.com/Hanzxc">GitHub</a>
+      <a href="#top">Top</a>
       <a href="resume.html">Resume</a>
+      <a href="https://github.com/Hanzxc">GitHub</a>
     </div>
   </footer>
 </body>
