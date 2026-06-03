@@ -5,7 +5,7 @@ This repository powers my GitHub Pages portfolio: https://hanzxc.github.io
 It is built for job searches, recruiter screening, and interview preparation. The site presents a clear story:
 
 - cybersecurity student at UOW / SIM
-- former data-centre engineer with Equinix and Alibaba Cloud experience
+- cybersecurity student with hands-on data center experience from Equinix and Alibaba Cloud
 - OSCP-track learner building practical security fundamentals
 - Python/Bash automation and technical documentation focus
 
