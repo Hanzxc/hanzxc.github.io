@@ -1,14 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Resume snapshot for Jun Han, cybersecurity student with data center experience.">
+  <meta name="description" content="Resume snapshot for Jun Han — cybersecurity student with data center experience and OSCP-track focus.">
+  <meta name="color-scheme" content="dark light">
   <title>Jun Han | Resume Snapshot</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (prefersLight ? "light" : "dark"));
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body class="resume-body">
   <main class="resume-wrap">
+    <div class="resume-actions">
+      <a class="button ghost sm" href="index.html">← Back to portfolio</a>
+      <button class="button primary sm" type="button" onclick="window.print()">Print / save as PDF</button>
+    </div>
+
     <article class="resume-sheet">
       <header class="resume-header">
         <div>
@@ -16,17 +32,21 @@
           <h1>Jun Han</h1>
           <p>Cybersecurity student · Data center experience · OSCP-track learner</p>
         </div>
-        <div>
-          <p><a href="https://github.com/Hanzxc">github.com/Hanzxc</a></p>
-          <p><a href="https://hanzxc.github.io">hanzxc.github.io</a></p>
-          <p><a href="index.html">Portfolio home</a></p>
+        <div class="resume-contact">
+          <p><a href="https://github.com/Hanzxc" rel="noopener">github.com/Hanzxc</a></p>
+          <p><a href="https://hanzxc.github.io" rel="noopener">hanzxc.github.io</a></p>
+          <!-- TODO(Jun): add your email + LinkedIn here when ready. -->
+          <p>Singapore · UOW / SIM</p>
         </div>
       </header>
 
       <section class="resume-section">
         <h2>Profile</h2>
         <p>
-          Cybersecurity student with hands-on data center experience and a practical approach to security. Focused on Linux, penetration-testing fundamentals, infrastructure hardening, automation, and clear technical documentation.
+          Cybersecurity student with hands-on data center experience and a practical approach to
+          security. Focused on Linux, penetration-testing fundamentals, infrastructure hardening,
+          automation, and clear technical documentation. I build small, tested, public projects
+          that show how I think and work.
         </p>
       </section>
 
@@ -35,52 +55,55 @@
           <h2>Core strengths</h2>
           <ul>
             <li>Infrastructure operations mindset from real data center environments.</li>
-            <li>Security fundamentals: enumeration, web testing basics, SQL injection concepts, Burp Suite, Nmap, and Linux privilege escalation basics.</li>
+            <li>Security fundamentals: enumeration, web testing basics, SQL injection concepts, Burp Suite, Nmap, Linux privilege-escalation basics.</li>
             <li>Automation with Python, Bash, output parsing, and repeatable reporting workflows.</li>
-            <li>Clear operating discipline from SAF Artillery Operator experience.</li>
+            <li>Operating discipline carried over from SAF Artillery Operator experience.</li>
           </ul>
         </div>
         <div>
           <h2>Tools</h2>
           <ul>
             <li>Python, Bash, C++, SQL, Git, Linux</li>
-            <li>Nmap, Burp Suite, basic web exploitation workflows</li>
-            <li>Plain-text notes, HTML/CSS, GitHub Pages, documentation systems</li>
-            <li>HTB/THM-style lab practice and structured notes</li>
+            <li>Nmap, Burp Suite, basic web-exploitation workflows</li>
+            <li>Plain-text notes, HTML/CSS/JS, GitHub Pages, documentation systems</li>
+            <li>HTB / THM-style lab practice and structured notes</li>
           </ul>
         </div>
       </section>
 
       <section class="resume-section">
         <h2>Experience</h2>
-        <h3>Data center operations background</h3>
-        <p>Hands-on experience in physical infrastructure environments including Equinix and Alibaba Cloud. Built familiarity with hardware, operational constraints, troubleshooting, and reliability-focused procedures.</p>
-        <h3>SAF Artillery Operator</h3>
-        <p>Developed discipline, teamwork, procedure-following, and pressure handling.</p>
+        <div class="resume-job">
+          <h3>Data Center Operations</h3>
+          <p class="role-meta">Equinix &amp; Alibaba Cloud environments</p>
+          <p>Hands-on experience in physical infrastructure: hardware, racks, operational constraints, troubleshooting, and reliability-focused procedures where uptime is non-negotiable.</p>
+        </div>
+        <div class="resume-job">
+          <h3>Artillery Operator</h3>
+          <p class="role-meta">Singapore Armed Forces (SAF)</p>
+          <p>Developed discipline, teamwork, precise procedure-following, and the ability to perform under pressure.</p>
+        </div>
       </section>
 
       <section class="resume-section">
-        <h2>Education and learning</h2>
+        <h2>Education &amp; learning</h2>
         <ul>
           <li>Cybersecurity student at UOW / SIM.</li>
-          <li>Studying cybersecurity and system security topics.</li>
+          <li>Studying cybersecurity and system-security topics.</li>
           <li>Preparing for OSCP through legal lab practice, structured notes, and project-based learning.</li>
         </ul>
       </section>
 
       <section class="resume-section">
-        <h2>Portfolio projects</h2>
+        <h2>Selected projects</h2>
         <ul>
-          <li><strong>Auto OSCP Recon Notes:</strong> Python CLI that turns local Nmap XML from authorized labs into plain-text recon notes, service checklists, and a report template.</li>
-          <li><strong>Lamport OTP:</strong> standard-library Python implementation of a hash-chain one-time password scheme.</li>
-          <li><strong>TOTP Simulator:</strong> RFC 6238 time-based one-time password implementation verified against official test vectors.</li>
-          <li><strong>Intrusion Detection System Simulation:</strong> anomaly-based IDS project using baselines, weighted deviations, and alerting logic.</li>
-          <li><strong>Cybersecurity Portfolio Site:</strong> static GitHub Pages site and resume snapshot.</li>
-          <li><strong>Security Lab Workflow:</strong> structured methodology for legal lab practice and writeups.</li>
+          <li><strong>Auto OSCP Recon Notes:</strong> Python CLI that turns local Nmap XML from authorized labs into plain-text recon notes, service checklists, and a report template (pytest + CI).</li>
+          <li><strong>Lamport OTP:</strong> standard-library Python implementation of a hash-chain one-time password scheme with replay-rejection tests.</li>
+          <li><strong>TOTP Simulator:</strong> RFC 6238 time-based OTP implementation verified against official test vectors.</li>
+          <li><strong>Intrusion Detection System Simulation:</strong> anomaly-based IDS using baselines, weighted deviations, and alerting logic.</li>
+          <li><strong>Cybersecurity Portfolio Site:</strong> fast static GitHub Pages site with light/dark themes and a printable resume.</li>
         </ul>
       </section>
-
-      <button class="button primary print-button" onclick="window.print()">Print / save as PDF</button>
     </article>
   </main>
 </body>
