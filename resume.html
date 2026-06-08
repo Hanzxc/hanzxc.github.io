@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-term="midnight">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,20 +9,14 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem("theme");
-        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-        document.documentElement.setAttribute("data-theme", saved || (prefersLight ? "light" : "dark"));
-      } catch (e) {}
-    })();
+    (function () { try { var t = localStorage.getItem("term-theme"); if (t) document.documentElement.setAttribute("data-term", t); } catch (e) {} })();
   </script>
 </head>
 <body class="resume-body">
   <main class="resume-wrap">
     <div class="resume-actions">
-      <a class="button ghost sm" href="index.html">← Back to portfolio</a>
-      <button class="button primary sm" type="button" onclick="window.print()">Print / save as PDF</button>
+      <a href="index.html">← back to terminal</a>
+      <button class="pdf" type="button" onclick="window.print()">print / save as PDF</button>
     </div>
 
     <article class="resume-sheet">
@@ -30,7 +24,7 @@
         <div>
           <p class="eyebrow">Resume snapshot</p>
           <h1>Jun Han</h1>
-          <p>Cybersecurity student · Data center experience · OSCP-track learner</p>
+          <p class="role">Cybersecurity student · Data center experience · OSCP-track learner</p>
         </div>
         <div class="resume-contact">
           <p><a href="https://github.com/Hanzxc" rel="noopener">github.com/Hanzxc</a></p>
@@ -75,12 +69,12 @@
         <h2>Experience</h2>
         <div class="resume-job">
           <h3>Data Center Operations</h3>
-          <p class="role-meta">Equinix &amp; Alibaba Cloud environments</p>
+          <p class="meta">Equinix &amp; Alibaba Cloud environments</p>
           <p>Hands-on experience in physical infrastructure: hardware, racks, operational constraints, troubleshooting, and reliability-focused procedures where uptime is non-negotiable.</p>
         </div>
         <div class="resume-job">
           <h3>Artillery Operator</h3>
-          <p class="role-meta">Singapore Armed Forces (SAF)</p>
+          <p class="meta">Singapore Armed Forces (SAF)</p>
           <p>Developed discipline, teamwork, precise procedure-following, and the ability to perform under pressure.</p>
         </div>
       </section>
@@ -101,7 +95,7 @@
           <li><strong>Lamport OTP:</strong> standard-library Python implementation of a hash-chain one-time password scheme with replay-rejection tests.</li>
           <li><strong>TOTP Simulator:</strong> RFC 6238 time-based OTP implementation verified against official test vectors.</li>
           <li><strong>Intrusion Detection System Simulation:</strong> anomaly-based IDS using baselines, weighted deviations, and alerting logic.</li>
-          <li><strong>Cybersecurity Portfolio Site:</strong> fast static GitHub Pages site with light/dark themes and a printable resume.</li>
+          <li><strong>Cybersecurity Portfolio Site:</strong> interactive terminal portfolio with a fully accessible plain-text fallback.</li>
         </ul>
       </section>
     </article>

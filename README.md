@@ -1,55 +1,54 @@
-# Jun Han — Cybersecurity Portfolio
+# Jun Han — Interactive Terminal Portfolio
 
 Source for my GitHub Pages portfolio: **https://hanzxc.github.io**
 
-Built for job searches, recruiter screening, and interview prep. It tells one
-honest story: infrastructure foundation → security growth → practical execution.
+The site is an **interactive terminal**. Visitors type (or click) commands —
+`help`, `whoami`, `projects`, `project totp`, `skills`, `resume`, `theme amber`,
+`clear` — to explore my background and work. It's built for recruiter screening
+and technical interviews, and it's deliberately on-brand for security work.
 
-- Cybersecurity student at UOW / SIM
-- Hands-on data center experience (Equinix, Alibaba Cloud)
-- OSCP-track learner building practical security fundamentals
-- Python / Bash automation and clear technical documentation
+## How it works
+
+- **Real shell loop** with command history (↑/↓), Tab autocomplete, `Ctrl+L` to
+  clear, a short boot sequence, and clickable command links in the output.
+- **Four terminal color themes** (`theme midnight|matrix|amber|light`), persisted
+  in `localStorage`.
+- **Single source of truth:** the terminal reads all of its content from the
+  semantic `#plain` section in `index.html` — so there's no duplicated copy to
+  keep in sync.
+- **Works without JavaScript:** if JS is off (or fails), the same content renders
+  as a clean, accessible, indexable plain-text page. A "plain view" button in the
+  terminal reveals it on demand, which is also the screen-reader-friendly path.
 
 ## Tech
 
-Plain **HTML + CSS + vanilla JavaScript** — no framework, no build step, instant
-load on GitHub Pages. JavaScript is purely progressive enhancement: the site is
-fully usable with JS disabled.
-
-### Features
-
-- **Light & dark themes** with a toggle, persisted in `localStorage` and seeded
-  from the visitor's OS preference (no flash of the wrong theme on load).
-- **Filterable project grid** (All / Python / Cryptography / Detection / Web).
-- **Scroll-reveal** animations, **scrollspy** nav highlighting, animated
-  terminal hero, mobile nav, and copy-to-clipboard contact — all with graceful
-  fallbacks and `prefers-reduced-motion` support.
-- **Accessible**: skip link, semantic landmarks, visible focus states, ARIA on
-  interactive controls, keyboard-dismissable menu.
-- **SEO**: canonical URL, Open Graph/Twitter meta, JSON-LD `Person`, sitemap,
-  robots, per-theme `theme-color`.
-- **Printable resume** (`resume.html`) that exports cleanly to PDF.
-
-## Files
+Plain **HTML + CSS + vanilla JavaScript**. No framework, no build step, no
+dependencies — it just works on GitHub Pages.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Main single-page portfolio |
+| `index.html` | Terminal UI + `#plain` fallback content (the data source) |
+| `terminal.js` | Command engine: parsing, history, autocomplete, themes, boot |
+| `styles.css` | Terminal themes + plain/resume/404 styling |
 | `resume.html` | Printable one-page resume snapshot |
-| `404.html` | Themed not-found page |
-| `styles.css` | Design-token-driven styles (dark + light) |
-| `main.js` | Theme, nav, reveal, scrollspy, filter, typing, copy |
-| `assets/favicon.svg` | Scalable JH monogram favicon |
+| `404.html` | "command not found" themed error page |
+| `assets/favicon.svg` | Terminal-prompt favicon |
 | `scripts/check_site.py` | Zero-dependency link/section validator |
 | `.github/workflows/portfolio-check.yml` | Runs the validator on every push/PR |
 | `robots.txt`, `sitemap.xml`, `_config.yml`, `.nojekyll` | Hosting/SEO metadata |
 
-## Selected projects
+## Commands
 
-- [Auto OSCP Recon Notes](https://github.com/Hanzxc/auto-oscp-recon-notes) — Python CLI that turns local Nmap XML from authorized labs into plain-text notes, service checklists, and a report template.
-- [Lamport OTP](https://github.com/Hanzxc/lamport-otp) — standard-library Python implementation of a hash-chain one-time password scheme.
-- [Intrusion Detection System Simulation](https://github.com/Hanzxc/intrusion-detection-system) — anomaly-based IDS using baselines, weighted deviations, and alerting logic.
-- [TOTP Simulator](https://github.com/Hanzxc/totp-simulator) — RFC 6238 time-based one-time password implementation verified against official test vectors.
+```
+help        list commands            theme       cycle color schemes
+whoami      about me                 banner      print the name banner
+projects    list projects            clear       clear the screen
+project <id>  project details        contact     github / email / linkedin
+skills      skills + honest levels   github      open my github
+experience  background / story       resume      open the printable resume
+```
+
+Easter eggs: `sudo`, `date`, `echo <text>`, `history`.
 
 ## Local preview
 
@@ -68,14 +67,20 @@ python3 scripts/check_site.py
 
 Search the project for `TODO(Jun)` and replace:
 
-- **Email** — `index.html` contact section (the copy-to-clipboard card) and
-  optionally `resume.html`.
-- **LinkedIn URL** — `index.html` contact section and `resume.html`.
+- **Email** — `index.html` (`#contact`, the `data-contact="email"` link) and `resume.html`.
+- **LinkedIn URL** — `index.html` (`#contact`) and `resume.html`.
 
 Everything else (name, school, experience, projects, GitHub) is already wired up.
 
-## Next improvements
+## Adding or editing a project
 
-- Add legal HTB/THM-style writeups focused on methodology and lessons learned.
-- Add screenshots or short demo clips for the recon-notes, Lamport OTP, and IDS projects.
-- Export a polished PDF resume from `resume.html`.
+Edit the matching `<article class="project" …>` block in `index.html`. The
+terminal picks up `data-id`, `data-name`, `data-tags`, `data-status`, `data-url`,
+the `.desc` paragraph, and the `.points` list automatically — no JS changes needed.
+
+## Selected projects
+
+- [Auto OSCP Recon Notes](https://github.com/Hanzxc/auto-oscp-recon-notes)
+- [Lamport OTP](https://github.com/Hanzxc/lamport-otp)
+- [Intrusion Detection System Simulation](https://github.com/Hanzxc/intrusion-detection-system)
+- [TOTP Simulator](https://github.com/Hanzxc/totp-simulator)

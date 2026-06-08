@@ -1,33 +1,36 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-term="midnight">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <meta name="color-scheme" content="dark light">
-  <title>Page not found | Jun Han</title>
+  <title>404 — command not found | Jun Han</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem("theme");
-        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-        document.documentElement.setAttribute("data-theme", saved || (prefersLight ? "light" : "dark"));
-      } catch (e) {}
-    })();
+    (function () { try { var t = localStorage.getItem("term-theme"); if (t) document.documentElement.setAttribute("data-term", t); } catch (e) {} })();
   </script>
 </head>
 <body>
-  <main class="error-wrap">
-    <p class="glitch">404</p>
-    <p class="eyebrow" style="justify-content:center;">Loose cable detected</p>
-    <h1 style="font-size:clamp(1.8rem,5vw,3rem);">This page doesn't exist.</h1>
-    <p class="lead" style="margin:0 auto 1.6rem;">
-      The route you requested isn't on the rack. Head back to the portfolio home and we'll
-      pretend this never happened.
-    </p>
-    <a class="button primary" href="index.html">Back home</a>
+  <main class="err-screen">
+    <section class="err-card" aria-label="Page not found">
+      <header class="term-bar">
+        <div class="lights" aria-hidden="true"><span class="red"></span><span class="amber"></span><span class="green"></span></div>
+        <p class="term-title">junhan@portfolio: ~ — error</p>
+      </header>
+      <div class="err-body">
+<span class="prompt-sm"><span style="color:var(--accent)">junhan</span>@<span style="color:var(--accent-2)">portfolio</span>:~$</span> cat <span id="path">that-page</span>
+<span class="err">bash: that-page: No such file or directory</span>
+
+The route you requested isn't on the rack. <span class="ok">Status: 404</span>
+
+<a href="index.html">→ cd ~ &nbsp;(back to the terminal)</a>
+      </div>
+    </section>
   </main>
+  <script>
+    try { document.getElementById("path").textContent = location.pathname.replace(/^\//, "") || "that-page"; } catch (e) {}
+  </script>
 </body>
 </html>

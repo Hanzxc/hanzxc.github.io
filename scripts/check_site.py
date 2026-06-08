@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Lightweight static-site validator.
+"""Lightweight static-site validator (zero dependencies).
 
-Runs in CI (and locally) with zero dependencies. It checks that:
+Checks that:
   - required files exist,
   - every local <a href> points at a file that exists,
-  - the landing page contains the expected section anchors.
+  - the page contains the content sections the terminal reads from.
 """
 from html.parser import HTMLParser
 from pathlib import Path
@@ -18,10 +18,11 @@ REQUIRED_FILES = [
     ROOT / "resume.html",
     ROOT / "404.html",
     ROOT / "styles.css",
-    ROOT / "main.js",
+    ROOT / "terminal.js",
     ROOT / "assets" / "favicon.svg",
 ]
-REQUIRED_INDEX_SECTIONS = ["projects", "skills", "story", "proof", "contact"]
+# The terminal reads its content from these section ids in index.html.
+REQUIRED_INDEX_SECTIONS = ["plain", "about", "projects", "skills", "experience", "contact"]
 
 
 class LinkParser(HTMLParser):
@@ -54,8 +55,7 @@ def main() -> int:
     for path in HTML_FILES:
         if not path.exists():
             continue
-        parser = parse(path)
-        for link in parser.links:
+        for link in parse(path).links:
             if link.startswith(("http://", "https://", "mailto:", "tel:", "#")):
                 continue
             target = (path.parent / link.split("#", 1)[0]).resolve()
@@ -66,7 +66,7 @@ def main() -> int:
         index = parse(ROOT / "index.html")
         for section_id in REQUIRED_INDEX_SECTIONS:
             if section_id not in index.ids:
-                errors.append(f"index.html: missing section id #{section_id}")
+                errors.append(f"index.html: missing required id #{section_id}")
 
     if errors:
         print("Portfolio check failed:")
@@ -74,7 +74,7 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print("Portfolio check passed: files, local links, and key sections look good.")
+    print("Portfolio check passed: files, local links, and content sections look good.")
     return 0
 
 
